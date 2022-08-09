@@ -15,23 +15,23 @@ public class Bee extends Actor
     public void act()
     {
      Koneksi Koneksi = new Koneksi();
-     String s = Koneksi.sampleMethod();
-     getWorld().showText("Nilai Dari Database = " + s, 120, 30);
-     KendaliArah(s);
-     s = String.valueOf(s);
+     String ka = Koneksi.sampleMethod();
+     getWorld().showText("Nilai Dari Database = " + ka, 120, 30);
+     KendaliArah(ka);
+     ka = String.valueOf(ka);
     }
     
-    private void KendaliArah(String s){
-        if (s.equals("w")){
+    private void KendaliArah(String ka){
+        if (ka.equals("w")){
              setLocation(getX(), getY()-1);
         }
-        if (s.equals("a")){
+        if (ka.equals("a")){
              setLocation(getX()-1, getY());
         }
-        if (s.equals("s")){
+        if (ka.equals("s")){
              setLocation(getX(), getY()+1);
         }
-        if (s.equals("d")){
+        if (ka.equals("d")){
              setLocation(getX()+1, getY());
         }
     }
